@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange-primary: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(217, 12%, 63%);
+  --medium-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --Darker-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--Darker-blue);
+}
+
+.move-down {
+  margin-bottom: 1.6rem;
+}
+
+.container {
+  padding: 25px;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 375px;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon-star {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: hsl(210, 6%, 26%);
+}
+
+.icon-star img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-header,
+.thanks-header {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.rating-text,
+.thanks-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--light-gray);
+}
+
+.rating-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 15px 20px;
+  border-radius: 100%;
+  background-color: hsl(213, 20%, 22%);
+  border: none;
+  color: var(--light-gray);
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--orange-primary);
+  color: var(--white);
+}
+
+.btn--submit {
+  background-color: var(--orange-primary);
+  border-radius: 40px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.btn--submit:hover {
+  background-color: var(--white);
+  color: var(--orange-primary);
+}
+
+.active {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+/* THANKS SECTION */
+
+.container--illustration {
+  padding: 40px 17px;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 375px;
+}
+
+.illustration-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.thanks-msg {
+  text-align: center;
+}
+
+.selected-text {
+  display: inline-block;
+  border-radius: 30px;
+  background-color: hsl(213, 20%, 22%);
+  padding: 10px 20px;
+  color: var(--orange-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 500px) {
+  .container,
+  .container--illustration {
+    width: 350px;
+  }
+}
